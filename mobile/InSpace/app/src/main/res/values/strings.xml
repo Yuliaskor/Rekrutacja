@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">InSpace</string>
+    <string name="inSpace">InSpace</string>
+    <string name="news">news</string>
+    <string name="image">image</string>
+    <string name="example_title">Rocket Lab to launch NASA smallsat using SBIR award</string>
+    <string name="data">Add at 21.05.2021</string>
+    <string name="example_description" >WASHINGTON — Rocket Lab will launch a NASA technology demonstration satellite under an unconventional arrangement as the agency works on a more standardized approach for launching smallsats.
+        Rocket Lab announced Oct. 6 that NASA selected the company to launch the Advanced Composite Solar Sail System (ACS3) spacecraft on an Electron rocket. The 12-unit cubesat will test the deployment of a solar sail using composite booms seven meters long. Those booms, which will unspool over the course of 20 to 30 minutes, are designed to be lighter that traditional metallic booms while also being less susceptible to thermal distortion.</string>
+    <string name="like_button">like button</string>
+    <string name="itemimg">ItemIMG</string>
+    <string name="background">background</string>
+</resources>

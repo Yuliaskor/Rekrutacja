@@ -1,0 +1,187 @@
+[
+   {
+      "id":11242,
+      "title":"NASA Announces Winners of Deep Space Food Challenge",
+      "url":"http://www.nasa.gov/press-release/nasa-announces-winners-of-deep-space-food-challenge",
+      "imageUrl":"https://www.nasa.gov/sites/default/files/thumbnails/image/01_iss065e092717.jpeg?itok=Ha3F_O4n",
+      "newsSite":"NASA",
+      "summary":"Variety, nutrition, and taste are some considerations when developing food for astronauts.",
+      "publishedAt":"2021-10-20T15:13:00.000Z",
+      "updatedAt":"2021-10-20T15:13:20.236Z",
+      "featured":false,
+      "launches":[
+         
+      ],
+      "events":[
+         
+      ]
+   },
+   {
+      "id":11241,
+      "title":"Rhea Space Activity to develop cislunar space ‘dashboard’ for U.S. Air Force",
+      "url":"https://spacenews.com/rhea-space-activity-to-develop-cislunar-space-dashboard-for-u-s-air-force/",
+      "imageUrl":"https://spacenews.com/wp-content/uploads/2021/10/cislunar-graphic.jpeg",
+      "newsSite":"SpaceNews",
+      "summary":"The U.S. Air Force has extended a research contract with startup Rhea Space Activity to develop a software tool to monitor and predict the trajectory of satellites in cislunar space.",
+      "publishedAt":"2021-10-20T15:03:11.000Z",
+      "updatedAt":"2021-10-20T15:03:11.499Z",
+      "featured":false,
+      "launches":[
+         
+      ],
+      "events":[
+         
+      ]
+   },
+   {
+      "id":11240,
+      "title":"From space traffic awareness to space traffic management",
+      "url":"https://spacenews.com/from-space-traffic-awareness-to-space-traffic-management/",
+      "imageUrl":"https://spacenews.com/wp-content/uploads/2021/10/DeAnna-Burton-at-AMOS-2021_1_Foust.jpg",
+      "newsSite":"SpaceNews",
+      "summary":"The term “space traffic management” (STM) inevitably triggers comparisons to air traffic management. The reality is far different.",
+      "publishedAt":"2021-10-20T14:13:11.000Z",
+      "updatedAt":"2021-10-20T14:13:11.793Z",
+      "featured":false,
+      "launches":[
+         
+      ],
+      "events":[
+         
+      ]
+   },
+   {
+      "id":11239,
+      "title":"NASA and Boeing testing valves to confirm root cause of Starliner issues",
+      "url":"https://www.nasaspaceflight.com/2021/10/nasa-boeing-testing-valves-starliner/",
+      "imageUrl":"https://www.nasaspaceflight.com/wp-content/uploads/2021/10/lead-3.jpg",
+      "newsSite":"NASA Spaceflight",
+      "summary":"On Tuesday, a joint teleconference between NASA and Boeing officials was held on the current status of Orbital Flight Test-2 (OFT-2) after a valve anomaly prevented its launch in August. While work to confirm the root cause of the issue continues, the launch target for OFT-2 remains in the first half of 2022, with a Crewed Flight Test (CFT) about six months later.",
+      "publishedAt":"2021-10-20T13:37:22.000Z",
+      "updatedAt":"2021-10-20T16:03:52.834Z",
+      "featured":false,
+      "launches":[
+         {
+            "id":"f1bcfbf6-d00d-42d7-bc68-82252817a57e",
+            "provider":"Launch Library 2"
+         }
+      ],
+      "events":[
+         
+      ]
+   },
+   {
+      "id":11238,
+      "title":"Senate appropriators frustrated with lack of progress on civil space traffic management",
+      "url":"https://spacenews.com/senate-appropriators-frustrated-with-lack-of-progress-on-civil-space-traffic-management/",
+      "imageUrl":"https://spacenews.com/wp-content/uploads/2021/01/Cover-Space-Junk.jpg",
+      "newsSite":"SpaceNews",
+      "summary":"Senate appropriators, frustrated with the lack of progress by the Commerce Department on space traffic management, are threatening to withhold other funding until it gets detailed plans from the agency.",
+      "publishedAt":"2021-10-20T11:23:20.000Z",
+      "updatedAt":"2021-10-20T11:23:20.500Z",
+      "featured":false,
+      "launches":[
+         
+      ],
+      "events":[
+         
+      ]
+   },
+   {
+      "id":11237,
+      "title":"SpaceX’s next Crew Dragon astronaut mission settles on Halloween launch",
+      "url":"https://www.teslarati.com/spacex-crew-dragon-halloween-launch/",
+      "imageUrl":"https://www.teslarati.com/wp-content/uploads/2021/10/Crew-3-Dragon-tour-Chair-Marshburn-Barron-Maurer-100921-SpaceX-C210-interior-1-crop-c.jpg",
+      "newsSite":"Teslarati",
+      "summary":"After initially moving forward 24 hours from October 31st to October 30th, SpaceX’s next Crew Dragon astronaut mission has slipped back to...",
+      "publishedAt":"2021-10-20T09:13:34.000Z",
+      "updatedAt":"2021-10-20T11:52:30.902Z",
+      "featured":false,
+      "launches":[
+         {
+            "id":"0d779392-1a36-4c1e-b0b8-ec11e3031ee6",
+            "provider":"Launch Library 2"
+         }
+      ],
+      "events":[
+         
+      ]
+   },
+   {
+      "id":11234,
+      "title":"Webb telescope unboxed after shipment to Guiana Space Center",
+      "url":"https://spaceflightnow.com/2021/10/19/webb-telescope-unboxed-after-shipment-to-guiana-space-center/",
+      "imageUrl":"https://spaceflightnow.com/wp-content/uploads/2021/10/jwst_unbox1.jpg",
+      "newsSite":"Spaceflight Now",
+      "summary":"Engineers removed the James Webb Space Telescope from its intercontinental shipping container in South America last week, and kicked off a final pre-launch comprehensive electrical systems test Monday ahead of blastoff in December on an Ariane 5 rocket, NASA’s program manager said.",
+      "publishedAt":"2021-10-19T22:43:06.000Z",
+      "updatedAt":"2021-10-20T04:21:49.171Z",
+      "featured":false,
+      "launches":[
+         {
+            "id":"d0fa4bb2-80ea-4808-af08-7785dde53bf6",
+            "provider":"Launch Library 2"
+         }
+      ],
+      "events":[
+         
+      ]
+   },
+   {
+      "id":11233,
+      "title":"It’s not the heat, it’s the humidity that grounded Boeing’s Starliner",
+      "url":"https://arstechnica.com/science/2021/10/boeing-removes-valves-from-starliner-delays-flight-to-first-half-of-2022/",
+      "imageUrl":"https://cdn.arstechnica.net/wp-content/uploads/2021/10/KSC-20210602-PH-BOE01_0002_orig.jpg",
+      "newsSite":"Arstechnica",
+      "summary":"NASA negotiating with SpaceX for additional crew missions to space station.",
+      "publishedAt":"2021-10-19T22:11:49.000Z",
+      "updatedAt":"2021-10-20T04:21:57.187Z",
+      "featured":false,
+      "launches":[
+         {
+            "id":"f1bcfbf6-d00d-42d7-bc68-82252817a57e",
+            "provider":"Launch Library 2"
+         }
+      ],
+      "events":[
+         
+      ]
+   },
+   {
+      "id":11232,
+      "title":"Industry panel: U.S. space systems need protection against cyber attacks",
+      "url":"https://spacenews.com/industry-panel-u-s-space-systems-need-protection-against-cyber-attacks/",
+      "imageUrl":"https://spacenews.com/wp-content/uploads/2019/11/190827-F-ND912-0089-470x470.jpg",
+      "newsSite":"SpaceNews",
+      "summary":"The U.S. government does not technically consider space systems “critical infrastructure,” which is slowing down efforts to protect networks from cyber attacks, experts said.",
+      "publishedAt":"2021-10-19T20:13:10.000Z",
+      "updatedAt":"2021-10-19T20:13:10.948Z",
+      "featured":false,
+      "launches":[
+         
+      ],
+      "events":[
+         
+      ]
+   },
+   {
+      "id":11231,
+      "title":"Kleos Space orders reconnaissance satellites for 2022 launch",
+      "url":"https://spacenews.com/kleos-space-orders-reconnaissance-satellites-for-2022-launch/",
+      "imageUrl":"https://spacenews.com/wp-content/uploads/2021/10/rsz_kleos_ksf1_mission_artwork.jpg",
+      "newsSite":"SpaceNews",
+      "summary":"Luxembourg-based startup Kleos Space has ordered four more RF reconnaissance satellites, securing a launch in mid-2022 to improve data collection and revisit times.",
+      "publishedAt":"2021-10-19T19:43:09.000Z",
+      "updatedAt":"2021-10-20T04:23:19.214Z",
+      "featured":false,
+      "launches":[
+         {
+            "id":"c660df6f-7e33-4c90-a0f5-b27c8cb4c974",
+            "provider":"Launch Library 2"
+         }
+      ],
+      "events":[
+         
+      ]
+   }
+]
