@@ -33,7 +33,7 @@ class NewsListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
+
         binding = FragmentNewslistBinding.inflate(inflater, container, false)
         newsAdapter = NewsAdaptor(mutableListOf())
         newsAdapter = NewsAdaptor(newsList)
@@ -64,20 +64,17 @@ class NewsListFragment : Fragment() {
     private fun fetchNews() {
         val queue = Volley.newRequestQueue(activity)
         val url = "https://saurav.tech/NewsAPI/top-headlines/category/health/in.json"
-        println("here")
-
+       // val url = "https://api.spaceflightnewsapi.net/v3/articles"
         val jsonObjectRequest = JsonObjectRequest(
             Request.Method.GET, url, null,
             {
                 println("before function body")
-                //  val newsJsonArray = it.getJSONArray("id")
                 val newsJsonArray = it.getJSONArray("articles")
-                println("after fetch")
                 val newsArray = ArrayList<News>()
                 for (i in 0 until newsJsonArray.length()) {
                     val newsJsonObject = newsJsonArray.getJSONObject(i)
                     var date = newsJsonObject.getString("publishedAt")
-                    date = date.replace("Z","")
+                    date = date.replace("Z", "")
                     val localDateTime = LocalDateTime.parse(date)
                     val formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy")
                     val publishedAt = formatter.format(localDateTime)
@@ -92,7 +89,6 @@ class NewsListFragment : Fragment() {
 
                     newsArray.add(news)
                 }
-                println("after function body")
                 newsAdapter.updateData(newsArray)
             },
             {
