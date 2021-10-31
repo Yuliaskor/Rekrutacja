@@ -1,8 +1,10 @@
 package com.example.inspace.fragments
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,17 +12,21 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.android.volley.Request
-import com.android.volley.toolbox.JsonObjectRequest
-import com.android.volley.toolbox.Volley
+import com.example.inspace.ApiInterface
 import com.example.inspace.ItemActivity
+import com.example.inspace.MyDataItem
 import com.example.inspace.News
 import com.example.inspace.adapters.NewsAdaptor
 import com.example.inspace.databinding.FragmentNewslistBinding
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
-
+const val BASE_URL = "https://api.spaceflightnewsapi.net/v3/"
 class NewsListFragment : Fragment() {
 
     private lateinit var binding: FragmentNewslistBinding
@@ -37,7 +43,7 @@ class NewsListFragment : Fragment() {
         binding = FragmentNewslistBinding.inflate(inflater, container, false)
         newsAdapter = NewsAdaptor(mutableListOf())
         newsAdapter = NewsAdaptor(newsList)
-        fetchNews()
+        getMyDate()
         binding.rvNews.layoutManager = LinearLayoutManager(activity)
         binding.rvNews.isClickable = true
         binding.rvNews.setHasFixedSize(true)
@@ -60,43 +66,43 @@ class NewsListFragment : Fragment() {
 
     }
 
-    @RequiresApi(Build.VERSION_CODES.O)
-    private fun fetchNews() {
-        val queue = Volley.newRequestQueue(activity)
-        val url = "https://saurav.tech/NewsAPI/top-headlines/category/health/in.json"
-       // val url = "https://api.spaceflightnewsapi.net/v3/articles"
-        val jsonObjectRequest = JsonObjectRequest(
-            Request.Method.GET, url, null,
-            {
-                println("before function body")
-                val newsJsonArray = it.getJSONArray("articles")
-                val newsArray = ArrayList<News>()
-                for (i in 0 until newsJsonArray.length()) {
-                    val newsJsonObject = newsJsonArray.getJSONObject(i)
-                    var date = newsJsonObject.getString("publishedAt")
-                    date = date.replace("Z", "")
-                    val localDateTime = LocalDateTime.parse(date)
-                    val formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy")
-                    val publishedAt = formatter.format(localDateTime)
-                    val news = News(
-                        newsJsonObject.getString("title"),
-                        // newsJsonObject.getString("summary"),
-                        newsJsonObject.getString("description"),
-                        //newsJsonObject.getString("imageUrl"),
-                        newsJsonObject.getString("urlToImage"),
-                        publishedAt
-                    )
+    private fun getMyDate(){
+        val retrofitBuilder = Retrofit.Builder()
+            .addConverterFactory(GsonConverterFactory.create())
+            .baseUrl(BASE_URL)
+            .build()
+            .create(ApiInterface::class.java)
+        val retrofitData = retrofitBuilder.getData()
 
-                    newsArray.add(news)
-                }
+        retrofitData!!.enqueue(object : Callback<List<MyDataItem>?> {
+            @RequiresApi(Build.VERSION_CODES.O)
+            override fun onResponse(
+                call: Call<List<MyDataItem>?>,
+                response: Response<List<MyDataItem>?>
+            ) {
+                val responseBody = response.body()!!
+                val newsArray = ArrayList<News>()
+                    for (myData in responseBody) {
+                        var date = myData.publishedAt
+                        date = date.replace("Z", "")
+                        val localDateTime = LocalDateTime.parse(date)
+                        val formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy")
+                        val publishedAt = formatter.format(localDateTime)
+                        val news = News(
+                            myData.title,
+                           myData.summary,
+                            myData.imageUrl,
+                            publishedAt
+                        )
+                        newsArray.add(news)
+                    }
                 newsAdapter.updateData(newsArray)
-            },
-            {
-                println("Error")
             }
 
-        )
-        queue.add(jsonObjectRequest)
+            override fun onFailure(call: Call<List<MyDataItem>?>, t: Throwable) {
+                Log.d(TAG, "onFailure:" + t.message )
+            }
+        })
     }
 
 }
