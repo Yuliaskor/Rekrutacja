@@ -59,17 +59,6 @@ class NewsAdaptor(private val newsList: MutableList<News>) :
     fun updateData(newData: ArrayList<News>) {
         newsList.clear()
         newsList.addAll(newData)
-
-        notifyDataSetChanged()
-    }
-
-    fun clear(){
-        newsList.clear()
-    }
-
-    fun addData(news: News) {
-        newsList.add(news)
-       // notifyItemInserted(newsList.size - 1)
         notifyDataSetChanged()
     }
 

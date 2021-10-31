@@ -17,9 +17,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //newsAdapter = NewsAdaptor(mutableListOf())
         setUpTabs()
-
     }
     private fun setUpTabs(){
         adapter = ViewPagerAdapter(supportFragmentManager)

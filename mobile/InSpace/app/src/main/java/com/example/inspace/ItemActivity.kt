@@ -22,17 +22,16 @@ class ItemActivity : AppCompatActivity() {
         val img = bundle.getString("img")
         val description = bundle.getString("description")
         val data = bundle.getString("data")
-        //  val id = bundle.getString("id")
 
         binding.itemDescription.text = description
         binding.itemTitle.text = title
         Picasso.get().load(img).into(binding.itemImage)
-        binding.floatingButton.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#fefefe"));
+        binding.floatingButton.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#fefefe"))
 
         binding.floatingButton.setOnClickListener {
             db.insertData(News(title!!,description!!,img!!,data!!))
-            binding.floatingButton.rippleColor = Color.parseColor("#5970e5");
-            binding.floatingButton.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#d71f2f"));
+            binding.floatingButton.rippleColor = Color.parseColor("#5970e5")
+            binding.floatingButton.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#d71f2f"))
         }
     }
 }

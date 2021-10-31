@@ -21,30 +21,22 @@ class FavoriteFragment : Fragment() {
     private var newsList: ArrayList<News> = ArrayList()
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
         val db = DataBaseManager(requireActivity())
         binding = FragmentFavoriteBinding.inflate(inflater, container, false)
 
         newsAdapter = NewsAdaptor(mutableListOf())
 
-       //db.deleteDate()
         var data = db.readData()
 
         for (i in 0 until data.size) {
-            println(data[i])
-           // newsAdapter.addData(data[i])
             newsList.add(data[i])
         }
         newsAdapter.notifyDataSetChanged()
-        //newsAdapter = NewsAdaptor(newsList)
+        newsAdapter.updateData(newsList)
         binding.rvNews.layoutManager = LinearLayoutManager(activity)
         binding.rvNews.isClickable = true
         binding.rvNews.setHasFixedSize(true)
@@ -65,19 +57,17 @@ class FavoriteFragment : Fragment() {
         })
 
         binding.swiper.setOnRefreshListener {
-            newsAdapter.clear()
             newsList.clear()
 
             data = db.readData()
 
             for (i in 0 until data.size) {
-                println(data[i])
-                // newsAdapter.addData(data[i])
                 newsList.add(data[i])
             }
             newsAdapter.updateData(newsList)
 
             binding.swiper.isRefreshing = false
+            newsAdapter.notifyDataSetChanged()
         }
 
         return binding.root
